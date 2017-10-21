@@ -1,0 +1,13 @@
+title=Custom Audio Player
+major_version=1
+minor_version=0
+build_version=0
+mm_icon_focus_hd=pkg:/images/icon.jpg
+mm_icon_focus_sd=pkg:/images/icon.jpg
+mm_icon_side_hd=pkg:/images/icon.jpg
+mm_icon_side_sd=pkg:/images/icon.jpg
+splash_screen_fhd=pkg:/images/splash_fhd.png
+splash_screen_hd=pkg:/images/splash_hd.png
+splash_screen_sd=pkg:/images/splash_sd.png
+ui_resolutions=FHD
+splash_rsg_optimization=1

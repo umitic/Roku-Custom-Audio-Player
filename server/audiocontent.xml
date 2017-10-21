@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<AudioContent>
+  <audio actors = "Artist - Unknown" album ="Album - Unknown" title = "KISS FM - LIVE STREAM" streamformat = "es.aac-adts" url = "http://80.86.106.143:9128/kissfm.aacp" HDPosterUrl = "pkg:/images/radio_stations_img/kiss_fm.png" Rating = "true"/>
+  <audio actors = "Artist - Unknown" album ="Album - Unknown" title = "TDI Radio - LIVE STREAM" streamformat = "mp3" url = "http://streaming.tdiradio.com:8000/tdiradiob" HDPosterUrl = "pkg:/images/radio_stations_img/tdi_radio.png" Rating = "true"/>
+  <audio actors = "Artist - Unknown" album ="Album - Unknown" title = "Polskie Radio - LIVE STREAM" streamformat = "hls" url = "http://stream85.polskieradio.pl/omniaaxe/k11.stream/playlist.m3u8" HDPosterUrl = "pkg:/images/radio_stations_img/polskie_radio.png" Rating = "true"/>
+  <audio actors = "Edgar Allan Yo and Shporky Pork" album ="Mony Pajton EP" title = "Niko kao Ja - MP3" streamformat = "mp3" url = "pkg:/mp3/Edgar_Allan_Yo_and_Shporky_Pork_Niko_Kao_Ja.mp3"	 HDPosterUrl = "pkg:/images/mp3_img/mony_pajton.png" Rating = "false"/>
+  <audio actors = "Edgar Allan Yo and Shporky Pork" album ="Mony Pajton EP" title = "Zatvaramo Krug - MP3" streamformat = "mp3" url = "pkg:/mp3/Edgar_Allan_Yo_and_Shporky_Pork_Zatvaramo_Krug.mp3" HDPosterUrl = "pkg:/images/mp3_img/mony_pajton.png" Rating = "false"/>
+  
+</AudioContent>

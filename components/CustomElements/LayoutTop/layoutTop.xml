@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="layoutTop" extends="Group" xsi:noNamespaceSchemaLocation="https://devtools.web.roku.com/schema/RokuSceneGraph.xsd">
+
+<script type="text/brightscript" uri="pkg:/components/CustomElements/LayoutTop/layoutTop.brs"/>
+<children>
+
+	<Poster
+		id = "backgroundPoster"
+		uri = "pkg:/images/backgroundTop.jpg"
+		width = "1920"
+		height = "150"
+		translation = "[0, 0]" 
+	/>
+	
+	
+	<Poster
+	  id = "icon"
+	  uri = "pkg:/images/idea.png"
+	  width = "128"
+	  height = "128"
+	  loadDisplayMode = "scaleToZoom"
+	  translation = "[10, 10]" 
+	/>
+
+</children>
+
+</component>

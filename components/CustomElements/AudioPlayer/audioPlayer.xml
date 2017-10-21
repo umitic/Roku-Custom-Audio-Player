@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="audioPlayer" extends="Group" xsi:noNamespaceSchemaLocation="https://devtools.web.roku.com/schema/RokuSceneGraph.xsd">
+	<interface>
+	
+    	<field id = "itemContent" type = "node" alwaysnotify = "true"/>
+    	<field id = "audioControl" type = "string" alwaysnotify = "true" alias = "audio.control"/>
+    	<field id = "audioState" type = "string" alwaysnotify = "true" alias = "audio.state"/>
+    	<field id = "resumeStatePoster" type = "string" alwaysnotify = "true" alias = "itemPlayStatePoster.uri"/>
+    	
+    </interface>	
+	<script type="text/brightscript" uri="pkg:/components/CustomElements/AudioPlayer/audioPlayer.brs"/>
+	
+	<children>
+	<Group id = "audioGroup">
+			<Poster
+				id = "backgroundPoster"
+				uri = "pkg:/images/playerBackground.jpg"
+				width = "600"
+				height = "600"
+				translation = "[0, 0]" 
+			/>
+			
+		<Group id = "itemInfoGroup" translation = "[100, 40]" >		
+			
+			<Poster
+				id = "itemPoster"
+				uri = "pkg:/images/audio_no_content.png"
+				width = "400"
+				height = "450"
+				loadDisplayMode = "scaleToZoom"
+				blendColor = "0x807a7b"	
+				
+			/>		
+						
+			<Animation id="authorAnimation"
+				duration="34"
+				repeat="true"
+				easeFunction="linear" >
+				<Vector2DFieldInterpolator id = "itemAuthorInterp"
+					key="[0.0, 2.0]"
+					keyValue="[ [5, 0], [-2000, 0] ]"
+					fieldToInterp = "itemAuthor.translation"/>							
+			</Animation>
+	
+			<Animation id="albumAnimation"
+				duration="34"
+				repeat="true"
+				easeFunction="linear" >
+				<Vector2DFieldInterpolator id = "itemAlbumInfoInterp"
+					key="[0.0, 2.0]"
+					keyValue="[ [5, 0], [-2000, 0] ]"
+					fieldToInterp = "itemAlbumInfo.translation"/>								
+			</Animation>
+	
+			<Animation id="songAnimation"
+				duration="34"
+				repeat="true"
+				easeFunction="linear" >
+				<Vector2DFieldInterpolator id = "itemSongNameInterp"
+					key="[0.0, 2.0]"
+					keyValue="[ [5, 0], [-2000, 0] ]"
+					fieldToInterp = "itemSongName.translation"/>								
+			</Animation>				
+			
+				
+		<Group id = "itemLabelGroup" clippingRect = "[0, 0, 395, 500]" >	
+			
+			<Group id = "itemAuthorGroup" translation = "[5, 300]">			
+				<Label
+					id="itemAuthor"
+					font="font:MediumBoldSystemFont"
+					horizAlign = "left"
+					enableRenderTracking = "true"
+					color = "0xf4f07c"
+				/>
+			</Group>
+			
+			<Group id = "itemAlbumInfoGroup" translation = "[5, 350]">
+				<Label
+					id="itemAlbumInfo"
+					height="44"
+					width="0"
+					font="font:SmallestSystemFont"
+					horizAlign = "left"
+					enableRenderTracking = "true"
+					color = "0xf4f07c"
+				/>		
+			</Group>
+			
+			<Group id = "itemSongGroup" translation = "[5, 400]">
+				<Label
+					id="itemSongName"
+					height="44"
+					width="0"
+					font="font:SmallBoldSystemFont"
+					horizAlign = "left"	
+					enableRenderTracking = "true"
+					color = "0xf4f07c"
+				/>	
+			</Group>	
+			
+				<Poster
+					id = "itemPlayStatePoster"
+					width = "48"
+					height = "48"
+					blendColor = "0xf4f07c"
+					uri = "pkg:/images/button_play.png"					
+				/>
+				
+			<Label
+					id = "itemRepeat"
+					translation = "[0, 50]"
+					text = "Repeat is OFF"
+				/>		
+				
+			</Group>
+			
+		</Group>
+			
+		<Group id = "playerInfoGroup" translation = "[100, 490]">
+			<Rectangle
+				id = "backgroundInfoPoster"
+				color = "0xC62828"
+				width = "400"
+				height = "60"
+				 
+			/>
+			
+			<ProgressBar 
+	        	id = "progressBar"
+	        	translation = "[6, 30]"
+	        	clippingRect = "[0, 0, 388, 6]"			
+			/>
+			
+			
+			<Label
+				id="itemCurPosition"
+				height="44"
+				width="0"
+				font="font:SmallestSystemFont"
+				translation ="[5,2]"
+				
+			/>			
+			
+			<Label
+				id="itemLenght"
+				height="44"
+				width="0"
+				font="font:SmallestSystemFont"
+				translation ="[312,2]"
+			/>		
+		
+		</Group>
+		
+		<Timer
+			id="timer"
+			repeat="false"
+			duration="1"
+		/>
+		<Poster
+			id = "itemFramePoster"
+			uri = "pkg:/images/item-focus.8.png"
+			width = "420"
+			height = "530"
+			translation = "[90, 30]"
+			visible = "false"				
+		/>			
+	</Group>	
+	<Audio id = "audio"/>
+</children>
+	
+
+</component>

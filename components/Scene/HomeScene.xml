@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name = "HomeScene" extends = "Scene" >
+<script type="text/brightscript" uri="pkg:/components/Scene/HomeScene.brs"/>
+<children>
+	<Poster
+	  id="background"
+	  uri="pkg:/images/background.jpg"
+	  width="1920"
+	  height="1080"
+	  translation="[0, 0]" 
+	/>
+	
+    <Group >
+		<layoutTop 
+			id = "layoutTop"
+			translation = "[0, 0]" 
+		/>
+		
+		<LabelList 
+			id = "audioLabelList"
+			translation = "[180, 200]"
+		/>
+		
+		<audioPlayer 
+			id = "audioPlayer"
+			translation = "[1000, 200]"
+			visible = "false" 
+		/>		
+		
+    </Group>
+
+  </children>
+</component>

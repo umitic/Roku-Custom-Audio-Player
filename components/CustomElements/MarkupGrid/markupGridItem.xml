@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="markupGridItem" extends="Group">
+	
+	<interface>
+		
+		<field id = "itemContent" type = "node"/>
+    	<field id = "focusPercent" type = "float"/>
+		
+	</interface>
+	
+	<script type="text/brightscript" uri="pkg:/components/CustomElements/MarkupGrid/markupGridItem.brs"/>
+	
+
+	<children>
+		
+    <Poster 
+      id = "itemPoster" 
+      translation = "[ 10, 10 ]" 
+      height = "288" 
+      scaleRotateCenter = "[ 256.0, 144.0 ]" >
+
+      <Rectangle 
+        id = "itemMask" 
+        color = "0x000000FF" 
+        opacity = "0.75" 
+        width = "512" 
+        height = "288" 
+        scaleRotateCenter = "[ 256.0, 144.0 ]" />
+        
+        <ProgressBar 
+        	id = "progressBar"
+			height="6"
+			translation = "[ 0, 282]" 
+			
+		/>
+		
+		<Rectangle 
+	        id = "itemMaskBar" 
+	        color = "0x000000FF" 
+	        opacity = "0.75" 
+	        height = "6" 
+	        translation = "[ 0, 282]"
+	        scaleRotateCenter = "[ 256.0, 144.0 ]" 
+        />
+
+    </Poster>
+	        
+	</children>
+</component>
