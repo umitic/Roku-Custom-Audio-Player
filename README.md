@@ -1,4 +1,4 @@
-# Roku-Custom-Audio-Player
+# Roku-Custom-Audio-Player with deep linking
 Example of Roku Custom Audio Player with progress bar, repeat option etc...
 
 Before deploying Application to Roku Device, please add "MP3" folder via Eclipse "BrightScript Deployment Wizard".
